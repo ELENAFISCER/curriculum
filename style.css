@@ -1,0 +1,118 @@
+.contenido section {
+  display: none;
+}
+
+/* Estilo para mostrar la sección seleccionada */
+.contenido section.mostrando {
+  display: block;
+}
+h2{
+  text-align: center;
+}
+
+.todo{
+  display: grid; 
+  grid-template-columns:1fr 3fr ;
+  grid-template-rows: 1.5fr auto; 
+  grid-template-areas: 
+  "foto titulo titulo"
+  "enlaces contenido botones"
+
+}
+
+.foto, img{
+grid-area: "enlaces contenido botones";
+margin: 10px; 
+
+}
+
+.titulo{
+  grid-area:titulo;
+  text-align: justify;
+  
+  
+}
+.enlaces{
+  grid-area: enlaces; 
+  text-align:justify; 
+  background-color: rgb(141, 230, 255);
+  border-radius: 10px;
+  padding:3em; 
+}
+.contenido{
+  grid-area: contenido; 
+  text-align:justify;
+  
+}
+
+section{
+  
+    margin: 30px;
+    background-color: rgb(141, 230, 255);
+    padding: 10px;
+    border-radius: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+
+.botones{
+  background-color: rgb(141, 230, 255);
+  grid-area: botones; 
+  border-radius: 10px;
+  text-align: center;
+  padding:3em;
+
+}
+body{
+  background-color: rgb(6, 132, 132);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-size: larger;
+}
+button{
+  width: 220px;
+  color:rgb(0, 0, 0);
+  background-color: rgb(141, 230, 255);
+  margin: 10px; 
+  border-radius: 2em;
+}
+footer{
+  background-color: rgb(177, 237, 237);
+  color: rgb(0, 0, 0);
+  font-size: smaller;
+  text-align: center;
+}
+@media print {
+  .printbutton {
+    display: none;
+  }
+  h2{
+    page-break-inside: avoid;
+  }
+#objetivo, #formacion, #experiencia, #competencias, #idiomas, #personales{ 
+  page-break-inside: avoid;}
+
+  .logo{
+      width: 50px;
+      height: 50px;
+  }
+  .todo{
+      display: block;
+      width: 100%;
+  }
+  .botones{
+      display: none;
+  }
+  .btn-enlaces{
+margin:0;
+position: relative;
+display: flex;
+  }
+  .cabecera{
+      size-adjust: 20%;
+  }
+  .botonescontacto{
+      position: inherit;
+      top:0;
+      right: 0;
+  }
+}
