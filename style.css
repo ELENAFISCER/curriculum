@@ -67,6 +67,7 @@ body{
   background-color: rgb(6, 132, 132);
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   font-size: larger;
+  background-image: url("596b8fed52b2cedb3addf527c150534c.jpg");
 }
 button{
   width: 220px;
@@ -80,6 +81,19 @@ footer{
   color: rgb(0, 0, 0);
   font-size: smaller;
   text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .todo{
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+    grid-template-areas: 
+    "1"
+    "2"
+    "3"
+    "4";
+  }
+
+
 }
 @media print {
   .printbutton {
